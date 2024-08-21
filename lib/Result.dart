@@ -10,11 +10,11 @@ class ResultPage extends StatelessWidget {
     int totalScore = answers.where((answer) => answer != null).fold(0, (sum, answer) => sum + (answer! + 1)); // Scores from 1 to 5
 
     String result;
-    if (totalScore <= 20) {
+    if (totalScore <= 15) {
       result = 'Your mental health is concerning. Consider seeking support.';
-    } else if (totalScore <= 35) {
+    } else if (totalScore <= 30) {
       result = 'You might be experiencing some stress. Try to take care of yourself.';
-    } else if (totalScore <= 50) {
+    } else if (totalScore <= 45) {
       result = 'Your mental health is okay. Keep maintaining a balanced lifestyle.';
     } else {
       result = 'Your mental health is excellent. Keep up the great work!';
